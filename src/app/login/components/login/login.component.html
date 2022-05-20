@@ -1,0 +1,30 @@
+<div fxLayout="column" fxLayoutAlign="center" class="container">
+  <div class="box-login">
+    <form #form="ngForm">
+      <mat-dialog-content>
+        <mat-form-field fxLayout="row" fxLayoutAlign="center">
+          <mat-label>Email:</mat-label>
+          <input [(ngModel)]="dadosLogin.email" id="email" name="email" type="text" required matInput>
+        </mat-form-field>
+        <mat-form-field fxLayout="row" fxLayoutAlign="center">
+          <mat-label>Senha:</mat-label>
+          <input [(ngModel)]="dadosLogin.password" id="password" name="password" type="password" required matInput>
+        </mat-form-field>
+      </mat-dialog-content>
+      <div fxLayout="row" fxLayoutAlign="center">
+        <button [disabled]="form.invalid" color="primary" mat-button (click)="logar(dadosLogin)" type="button">
+          Login
+          <mat-icon>send</mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="box-login">
+    <div fxLayout="row" fxLayoutAlign="center">
+      <h4>OR</h4>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center">
+      <button color="primary" mat-button type="button">Create Account</button>
+    </div>
+  </div>
+</div>
