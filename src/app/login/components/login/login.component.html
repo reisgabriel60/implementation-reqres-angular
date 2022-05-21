@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="center" class="container">
+<div fxLayout="column" fxLayoutAlign="center">
   <div class="box-login">
     <form #form="ngForm">
       <mat-dialog-content>
@@ -7,7 +7,7 @@
           <input [(ngModel)]="dadosLogin.email" id="email" name="email" type="text" required matInput>
         </mat-form-field>
         <mat-form-field fxLayout="row" fxLayoutAlign="center">
-          <mat-label>Senha:</mat-label>
+          <mat-label>Password:</mat-label>
           <input [(ngModel)]="dadosLogin.password" id="password" name="password" type="password" required matInput>
         </mat-form-field>
       </mat-dialog-content>
@@ -24,7 +24,7 @@
       <h4>OR</h4>
     </div>
     <div fxLayout="row" fxLayoutAlign="center">
-      <button color="primary" mat-button type="button">Create Account</button>
+      <button color="primary" mat-button type="button" routerLink="/cadastro">Create Account</button>
     </div>
   </div>
 </div>

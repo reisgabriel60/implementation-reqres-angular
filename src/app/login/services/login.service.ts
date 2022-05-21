@@ -5,7 +5,7 @@ import {Login} from "../models/login";
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class LoginService {
 
   headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
@@ -13,7 +13,7 @@ export class AuthService {
 
   }
 
-  public logar(dadosLogin: Login) {
+  logar(dadosLogin: Login) {
     return this.http.post(`https://reqres.in/api/login`,
       JSON.stringify(dadosLogin),
       {headers: this.headers});

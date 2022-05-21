@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService} from "../services/auth.service";
-import {Login} from "../models/login";
+import {LoginService} from "../../services/login.service";
+import {Login} from "../../models/login";
 import {Router} from "@angular/router";
 
 @Component({
@@ -11,14 +11,14 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit {
   dadosLogin = new Login();
 
-  constructor(private auth: AuthService,
+  constructor(private loginService: LoginService,
               private router: Router) { }
 
   ngOnInit(): void {
   }
 
   logar(dadosLogin: Login){
-    this.auth.logar(dadosLogin)
+    this.loginService.logar(dadosLogin)
       .subscribe((response: any) => {
         if (response.token) {
           localStorage.setItem('token', response.token);

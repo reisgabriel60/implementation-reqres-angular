@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { UsuariosRoutingModule } from './usuarios-routing.module';
 import { UsuariosComponent } from './usuarios.component';
+import {MatTableModule} from "@angular/material/table";
+import {FlexModule} from "@angular/flex-layout";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -11,7 +16,12 @@ import { UsuariosComponent } from './usuarios.component';
   ],
   imports: [
     CommonModule,
-    UsuariosRoutingModule
+    UsuariosRoutingModule,
+    MatTableModule,
+    FlexModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class UsuariosModule { }
